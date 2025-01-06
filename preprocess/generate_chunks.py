@@ -63,7 +63,7 @@ if __name__ == '__main__':
         ]
     submitted_jobs = []
 
-    colmap_exe = "colmap.bat" if platform.system() == "Windows" else "colmap"
+    colmap_exe = "colmap.bat" if platform.system() == "Windows" else "/home/featurize/work/colmap_bin/usr/local/bin/colmap"
     start_time = time.time()
 
     ## First create raw_chunks, each chunk has its own colmap.

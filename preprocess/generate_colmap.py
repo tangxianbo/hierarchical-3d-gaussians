@@ -65,7 +65,7 @@ if __name__ == '__main__':
         args.masks_dir = os.path.join(args.project_dir, "inputs/masks")
         args.masks_dir = args.masks_dir if os.path.exists(args.masks_dir) else ""
 
-    colmap_exe = "colmap.bat" if platform.system() == "Windows" else "colmap"
+    colmap_exe = "colmap.bat" if platform.system() == "Windows" else "/home/featurize/work/colmap_bin/usr/local/bin/colmap"
     start_time = time.time()
 
     print(f"Project will be built here ${args.project_dir} base images are available there ${args.images_dir}.")

@@ -24,7 +24,7 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     matching_nb = 50 if args.skip_bundle_adjustment else 200
-    colmap_exe = "colmap.bat" if platform.system() == "Windows" else "colmap"
+    colmap_exe = "colmap.bat" if platform.system() == "Windows" else "/home/featurize/work/colmap_bin/usr/local/bin/colmap"
     bundle_adj_chunk = os.path.join(args.raw_chunk, "bundle_adjustment")
 
     if not os.path.exists(bundle_adj_chunk):
