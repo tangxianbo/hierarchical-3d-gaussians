@@ -128,7 +128,7 @@ if __name__ == '__main__':
     if args.n_gps_neighbours > 0:
         all_img_names = []
         for ind, cam in enumerate(image_files_organised):
-            all_img_names += [os.path.join(cam['dir'], img_name) for img_name in cam['images']]
+            all_img_names += [ f"{cam['dir']}/{img_name}" for img_name in cam['images']]
 
         all_cam_centers = [image_coordinates(img_name) for img_name in all_img_names]
         # all_cam_centers = Parallel(n_jobs=-1, backend="threading")(
